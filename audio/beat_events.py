@@ -1,10 +1,11 @@
 from dataclasses import dataclass
-from typing import Callable, List
+from typing import Callable, list
 
 
 @dataclass
 class BeatEvent:
     """Represents a single beat occurrence with its timestamp and intensity."""
+
     time_seconds: float
     strength: float = 1.0
 
@@ -17,6 +18,7 @@ class BeatEventDispatcher:
     This allows different subsystems (movement, lighting, DJ engine)
     to react to beat events independently.
     """
+
     def __init__(self) -> None:
         self._listeners: list[Callable[[BeatEvent], None]] = []
 
@@ -29,7 +31,9 @@ class BeatEventDispatcher:
 
 
 def print_beat_listener(event: BeatEvent) -> None:
-    print(f"[EVENT] Beat detected at {event.time_seconds:.2f}s | strength={event.strength:.2f}")
+    print(
+        f"[EVENT] Beat detected at {event.time_seconds:.2f}s | strength={event.strength:.2f}"
+    )
 
 
 if __name__ == "__main__":
