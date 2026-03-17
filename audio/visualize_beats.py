@@ -8,7 +8,6 @@ tool to verify beat detection before connecting the results to robot
 movement or other event systems.
 """
 
-from pathlib import Path
 import sys
 
 import librosa

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Callable, list
+from typing import Callable
 
 
 @dataclass
@@ -31,9 +31,7 @@ class BeatEventDispatcher:
 
 
 def print_beat_listener(event: BeatEvent) -> None:
-    print(
-        f"[EVENT] Beat detected at {event.time_seconds:.2f}s | strength={event.strength:.2f}"
-    )
+    print(f"[BEAT] time={event.time_seconds:.2f}s " f"strength={event.strength:.2f}")
 
 
 if __name__ == "__main__":

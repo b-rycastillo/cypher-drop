@@ -1,6 +1,6 @@
-from pathlib import Path
-from dataclasses import dataclass
 import sys
+from dataclasses import dataclass
+from pathlib import Path
 
 import librosa
 
@@ -31,7 +31,7 @@ def detect_bpm(audio_path: str) -> BeatAnalysis:
             tempo: Estimated beats per minute.
             beat_times: Time (seconds) of each detected beat.
     """
-    file_path = Path(audio_path)
+    file_path = Path(audio_path).resolve()
 
     if not file_path.exists():
         print(f"Error: file not found -> {file_path}")
