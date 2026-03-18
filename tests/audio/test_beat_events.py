@@ -1,4 +1,4 @@
-from audio.beat_events import BeatEvent, BeatEventDispatcher
+from cypher_drop.audio.beat_events import BeatEvent, BeatEventDispatcher
 
 
 def test_register_listener() -> None:

@@ -14,7 +14,7 @@ import librosa
 import librosa.display
 import matplotlib.pyplot as plt
 
-from audio.bpm_detection import detect_bpm
+from cypher_drop.audio.bpm_detection import detect_bpm
 
 
 def visualize_beats(audio_path: str) -> None:
